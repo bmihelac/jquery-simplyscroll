@@ -15,7 +15,11 @@
 
 $.fn.simplyScroll = function(options) {
 	return this.each(function() {
-		new $.simplyScroll(this,options);
+		var $this = $(this),
+        	data = $this.data('simply-scroll');
+    	if (!data) {
+    		$this.data('simply-scroll', (data = new $.simplyScroll(this, options)));
+    	}
 	});
 };
 
