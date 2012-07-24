@@ -387,6 +387,10 @@ $.simplyScroll.fn.extend({
 	},
 	resetPos: function() {
 		this.$clip[0]['scroll' + this.scrollPos] = this.resetPosition;
+	},
+	destroy: function() {
+		this.movePause();
+		this.resetPosition();
 	}
 });
 		  
