@@ -65,8 +65,8 @@ $.simplyScroll = function(el,options) {
 	
 	if (!this.isAuto) { //button placeholders
 		this.$list.parent().parent()
-		.prepend('<div class="simply-scroll-forward"></div>')
-		.prepend('<div class="simply-scroll-back"></div>');
+		.prepend('<div class="simply-scroll-forward"><span class="glyphicon glyphicon-chevron-right"></span></div>')
+		.prepend('<div class="simply-scroll-back"><span class="glyphicon glyphicon-chevron-left"></span></div>');
 	} else {
 		if (this.o.pauseButton) {
 			this.$list.parent().parent()
