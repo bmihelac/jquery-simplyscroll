@@ -340,6 +340,7 @@ $.simplyScroll.fn.extend({
 			this.$btnBack.removeClass('disabled');
 		}
 		self.interval = setInterval(function() {
+      console.log("setInterval");
 			if (self.$clip[0]['scroll' + self.scrollPos] < (self.posMax-self.clipMax)) {
 				self.$clip[0]['scroll' + self.scrollPos] += self.o.speed;
 			} else if (self.isLoop) {
@@ -390,7 +391,6 @@ $.simplyScroll.fn.extend({
 	},
 	destroy: function() {
 		this.movePause();
-		this.resetPosition();
 	}
 });
 		  
